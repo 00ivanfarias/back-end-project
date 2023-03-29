@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Product_1",
+        "description": "Description_1",
+        "price": 17,
+        "thumbnail": "no_image",
+        "code": "aaa000",
+        "stock": 20,
+        "PID": 0
+    },
+    {
+        "title": "Product_2",
+        "description": "Description_2",
+        "price": 12,
+        "thumbnail": "no_image",
+        "code": "aab001",
+        "stock": 20,
+        "PID": 1
+    },
+    {
+        "title": "Product_3",
+        "description": "Description_3",
+        "price": 5,
+        "thumbnail": "no_image",
+        "code": "abb011",
+        "stock": 20,
+        "PID": 2
+    },
+    {
+        "title": "Product_4",
+        "description": "Description_4",
+        "price": 8,
+        "thumbnail": "no_image",
+        "code": "bbb111",
+        "stock": 20,
+        "PID": 3
+    }
+]
