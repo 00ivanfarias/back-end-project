@@ -22,7 +22,7 @@ export default class CartManager {
       console.log(".:CART SUCCESSFULLY CREATED.");
       return newCart;
     } catch {
-      return console.error(".:failed task createCard().");
+      return console.error(".:Failed task createCard().");
     }
   };
 

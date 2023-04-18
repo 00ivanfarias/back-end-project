@@ -13,7 +13,7 @@ class ProductManager {
     await fs.promises.mkdir(this.path, { recursive: true });
 
     if (!(title, description, price, thumbnail, code, stock)) {
-      return { error: "MISSING PARAMETERS. TRY AGAIN" };
+      return { error: " MISSING PARAMETERS. TRY AGAIN " };
     } else if (this.products.find((prod) => prod.code === code)) {
       return { error: "INVALID PRODUCT CODE.THIS PRODUCT IS ALREADY ENLISTED" };
     } else {
@@ -66,15 +66,14 @@ class ProductManager {
     const filtered = resParse.find((product) => product.PID === id);
 
     if (filtered) {
-        const newArray = resParse.map((item) => {
-          return id == item.PID ? { ...item, ...newData } : item;
-        });
-        await fs.promises.writeFile(this.filename, JSON.stringify(newArray));
-        console.log("PRODUCT UPDATED SUCCESSFULLY");
-      } else {
-        console.log(`PRODUCT ${id} DOES NOT EXISTS IN THE LIST `);
-      }
-
+      const newArray = resParse.map((item) => {
+        return id == item.PID ? { ...item, ...newData } : item;
+      });
+      await fs.promises.writeFile(this.filename, JSON.stringify(newArray));
+      console.log("PRODUCT UPDATED SUCCESSFULLY");
+    } else {
+      console.log(`PRODUCT ${id} DOES NOT EXISTS IN THE LIST `);
+    }
   };
 
   deleteProductById = async (id) => {
@@ -91,7 +90,6 @@ class ProductManager {
       console.log(`PRODUCT ${id} DOES NOT EXISTS ON THE LIST`);
     }
   };
-
 }
 
 const pManager = new ProductManager("/products.json");
@@ -105,4 +103,4 @@ const pManager = new ProductManager("/products.json");
 
 // pManager.updateProductById(1, {title:"ModifiedTitle2",description:"ModifiedDescription2",price:12,thumbnail:"noimage",code:"def456",stock:10});
 
-pManager.deleteProductById(1)
+pManager.deleteProductById(1);

@@ -32,7 +32,6 @@ app.get("/product/:pid", async (req, res) => {
   if (product) {
     res.send(product);
   } else {
-    console.log({ error: `.: Query not resolved. The ID is ${product}.` })
-    
+    console.log({ error: `.:Query not resolved. The ID is ${product}.` });
   }
 });

@@ -8,7 +8,7 @@ const router = Router();
 router.post("/", async (req, res) => {
   try {
     await cManager.createCart();
-    res.send({ status: "success", inf: ".:cart was created successfuly." });
+    res.send({ status: "success", inf: ".: cart was created successfuly." });
   } catch {
     res.send({ status: "error", inf: ".:problem when creating cart." });
   }

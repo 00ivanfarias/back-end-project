@@ -18,5 +18,5 @@ app.use("/api/carts", cartsRouter);
 
 //LISTENER
 app.listen(PORT, () => {
-  console.log(`.:SERVER RUNNING ON PORT #${PORT}:.`);
+  console.log(`.: SERVER RUNNING ON PORT #${PORT}:.`);
 });

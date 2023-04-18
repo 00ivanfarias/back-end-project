@@ -24,7 +24,7 @@ export default class ProductManager {
     if (
       !(title, description, code, price, status, stock, category, thumbnail)
     ) {
-      return { error: ".:MISSING PARAMETERS. TRY AGAIN." };
+      return { error: ".: MISSING PARAMETERS. TRY AGAIN." };
     } else if (this.products.find((prod) => prod.code === code)) {
       return {
         error: ".:INVALID PRODUCT CODE. THIS PRODUCT IS ALREADY ENLISTED.",

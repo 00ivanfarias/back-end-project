@@ -20,7 +20,7 @@ router.get("/:pid", async (req, res) => {
   const product = await pManager.getProductById(
     Number.parseInt(req.params.pid)
   );
-  console.log(`.:TRYING TO MATCH ${product}`);
+  console.log(`.: TRYING TO MATCH ${product}`);
 
   if (product) {
     res.send(product);

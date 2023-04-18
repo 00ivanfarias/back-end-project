@@ -25,14 +25,5 @@
         "code": "abb011",
         "stock": 20,
         "PID": 2
-    },
-    {
-        "title": "Product_4",
-        "description": "Description_4",
-        "price": 8,
-        "thumbnail": "no_image",
-        "code": "bbb111",
-        "stock": 20,
-        "PID": 3
     }
 ]
