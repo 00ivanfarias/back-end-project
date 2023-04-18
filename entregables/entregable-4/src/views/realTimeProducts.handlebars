@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>products</h1>
+
+  <div class="products">
+    <ul id="products-list">
+      {{#each products}}
+        <li class="{{PID}}">{{title}} - {{description}} - {{price}} </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <fieldset class="form-fieldset">
+    <legend class="form-legend">Añadir/Eliminar un producto:</legend>
+    <div class="group">
+      <label for="titile">Titulo:</label>
+      <input type="text" id="title" name="title" required /><br /><br />
+    </div>
+    <div class="group">
+      <label for="description">Descripcion:</label>
+      <input type="text" id="description" name="description" required /><br
+      /><br />
+    </div>
+    <div class="group">
+      <label for="code">Code:</label>
+      <input type="text" id="code" name="code" required />
+    </div>
+    <div class="group">
+      <label for="price">Precio:</label>
+      <input type="number" id="price" name="price" required /><br /><br />
+    </div>
+    <div class="group">
+      <label for="status">Estado:</label>
+      <select id="status" name="status" required>
+        <option value="available">Disponilbe</option>
+        <option value="out-of-stock">Sin Stock</option>
+        <option value="discontinued">No Disponible</option>
+      </select><br /><br />
+    </div>
+    <div class="group">
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" name="stock" min="0" required /><br /><br
+      />
+    </div>
+    <div class="group">
+      <label for="category">Categoria:</label>
+      <input type="text" id="category" name="category" required /><br /><br />
+    </div>
+    <div class="group">
+      <label for="thumbnails">Imagen:</label>
+      <input type="text" id="thumbnails" name="thumbnails[]" /><br /><br />
+    </div>
+    <div class="group">
+      <button onclick="handleAdd()">Añadir</button><br /><br />
+      <button onclick="#">Eliminar</button><br /><br />
+    </div>
+
+  </fieldset>
+
+</div>
+
+{{! socket-lib }}
+<script src="/socket.io/socket.io.js"></script>
+{{! public-index.js }}
+<script src="/js/index.js"></script>

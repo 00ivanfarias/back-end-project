@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>products</h1>
+
+  <div class="products">
+    <ul class="products-list">
+      {{#each products}}
+        <li class="{{PID}}">{{title}} - {{description}} - {{price}} </li>
+      {{/each}}
+    </ul>
+  </div>
+
+</div>
+
+{{! socket-lib }}
+<script src="/socket.io/socket.io.js"></script>
+{{! public-index.js }}
+<script src="/js/index.js"></script>
